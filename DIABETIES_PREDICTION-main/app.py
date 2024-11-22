@@ -3,7 +3,9 @@ import streamlit as st
 import numpy as np
 
 # Load models
-model_logistic = pickle.load(open('model_diabetes.sav', 'rb'))
+import os
+model_path = os.path.join(os.getcwd(), 'model_diabetes.sav')
+model_logistic = pickle.load(open(model_path, 'rb'))
 
 # App Title
 st.title("Diabetes Prediction Application")
